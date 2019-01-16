@@ -1,6 +1,6 @@
-#Basic docker stack for Magento 2 development
+# Basic docker stack for Magento 2 development
 
-###In order to install Magento 2 follow this step:
+### In order to install Magento 2 follow this step:
 
 1. Obtain your magento keys: 
 
