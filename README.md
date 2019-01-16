@@ -8,18 +8,22 @@
 2. Create new project using Composer: 
 
     `composer create-project --repository=https://repo.magento.com/ magento/project-community-edition <install-directory-name>`
-3. Move content of this repo to <install-directory-name>
-4. Create .env file based on .env.dist
-5. Add /docker/data to `.gitignore`
+3. Move content of this repo to `<install-directory-name>`
+4. Create `.env` file based on `.env.dist`
+5. Add `/docker/data` directory to `.gitignore`
 6. Add new host (`/etc/hosts -> 127.0.0.1 m2.loc`)
 
 7. Set proper file permissions:
 
-    `cd /var/www/html/<magento install directory>
-    find var generated vendor pub/static pub/media app/etc -type f -exec chmod g+w {} +
-    find var generated vendor pub/static pub/media app/etc -type d -exec chmod g+ws {} +
-    chown -R :www-data . # Ubuntu
-    chmod u+x bin/magento`
+    `cd /var/www/html/<magento install directory>`
+  
+    `find var generated vendor pub/static pub/media app/etc -type f -exec chmod g+w {} +`
+    
+    `find var generated vendor pub/static pub/media app/etc -type d -exec chmod g+ws {} +`
+    
+    `chown -R :www-data . # Ubuntu`
+    
+    `chmod u+x bin/magento`
     
     More info can be found here: 
     
@@ -35,6 +39,6 @@
 - `pass` as a password
 - `databse` as a database name
 
-User, password and database name can be configured in .env file.
+User, password and database name can be configured in `.env` file.
 
 11. Enjoy!
